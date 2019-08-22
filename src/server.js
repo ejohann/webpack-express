@@ -10,6 +10,8 @@ app.get('/', function(req, res){
     res.send(contentFromHtmlFile);
 });
 
+app.use('/static', express.static(path.resolve(__dirname, '../dist')));
+
 app.listen(3000, function(){
     console.log('Server is running on localhost 3000');
 });
